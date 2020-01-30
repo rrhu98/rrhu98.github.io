@@ -6,6 +6,8 @@ body {
 #welcome {
     margin-left: auto;
     margin-right: auto ;
+    position: relative;
+    text-align: center;
 }
 #title {
     position: absolute; visibility: visible; left: 480px; top: 100px; z-index: 200;
