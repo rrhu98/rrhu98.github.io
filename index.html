@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <title>Ryan Hu</title>
 </head>
@@ -16,8 +17,19 @@
             </H1>
         </div>
     
-        <div id="me">
-            <img src="images/Headshot.jpg" height=200 width=140>
+        <div id="slideshow">
+            <div>
+                <img src="images/Headshot.jpg" height="310" width="210">
+            </div>
+            <div>
+                <img src="images/me1.JPG" height="310" width="210">
+            </div>
+            <div>
+                <img src="images/me3.JPG" height="310" width="210">
+            </div>
+            <div>
+                <img src="images/me4.JPG" height="310" width="210">
+            </div>
         </div>
     </div>
     
@@ -69,7 +81,18 @@
             <li id="li4"><a id="gm" href="mailto:rrhu98@gmail.com"><img id="gma" src="images/gmail.png"height=40 width=40>Email</a></li>
         </ul>
     </div>
-    
 
+    <script>
+        $("#slideshow > div:gt(0)").hide();
+
+        setInterval(function() {
+            $('#slideshow > div:first')
+            .fadeOut(1000)
+            .next()
+            .fadeIn(1000)
+            .end()
+            .appendTo('#slideshow');
+        }, 4000);
+    </script>
 </body>
 </html>
